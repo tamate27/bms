@@ -1,0 +1,63 @@
+p {
+  font-size: 1em;
+  line-height: 1.3em;
+  letter-spacing: 0;
+  font-family: sans-serif;
+  margin: 1em auto;
+  width: 80%;
+}
+
+p.table {
+  font-size: 1em;
+  line-height: 1.3em;
+  letter-spacing: 0;
+  font-family: sans-serif;
+  margin: 1em auto;
+  width: 80%;
+}
+
+ul.table {
+  font-size: 1em;
+  line-height: 1.2em;
+  letter-spacing: 0;
+  font-family: sans-serif;
+  margin: 1em auto;
+  width: 80%;
+}
+
+ol.bread {
+  font-size: 0.9em;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+  padding: 0;
+  list-style-type: none;
+  font-family: sans-serif;
+  display: flex;
+  margin: 1em auto;
+  width: 85%;
+}
+
+ol.bread li::after {
+  content: ">";
+  font-size: 0.9em;
+  line-height: 1.2em;
+  margin: 0 6px;
+}
+
+ol.bread li:last-child::after {
+  content:none;
+}
+
+.image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table td.sc {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
