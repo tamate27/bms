@@ -13,7 +13,7 @@ function makeBMSTable(info, mark) {
   var obj = $("#table_int");
   // 表のクリア
   obj.html("");
-  $("<tr height='20' style='color:white;background-color:#0f2350'><td align='center'>LV</td><td align='center'>譜面</td><td align='center'>タイトル（LR2IR）</td><td align='center'>作者（本体）</td><td align='center'>差分</td><td align='center'>コメント</td></tr>").appendTo(obj);
+  $("<tr height='2.5em' style='color:white;background-color:#0f2350'><td align='center'>LV</td><td align='center'>譜面</td><td align='center'>タイトル（LR2IR）</td><td align='center'>作者（本体）</td><td align='center'>差分</td><td align='center'>コメント</td></tr>").appendTo(obj);
   var obj_sep = null;
   for (var i = 0; i < info.length; i++) {
     // 難度ごとの区切り
@@ -51,10 +51,10 @@ function makeBMSTable(info, mark) {
     $("<td width='22%'>" + astr + "</td>").appendTo(str);
     // 差分
     if(info[i].comment == "同梱譜面") {
-      $("<td class='sc' max-width='20%'>同梱譜面</td>").appendTo(str);
+      $("<td class='sc' width='20%'>同梱譜面</td>").appendTo(str);
     } else {
       if(info[i].url_diff != null) {
-        $("<td class='sc' max-width='20%'><a href='" + info[i].url_diff + "'>" + info[i].url_diff + "</a></td>").	appendTo(str);
+        $("<td class='sc' width='20%'><a href='" + info[i].url_diff + "'>" + info[i].url_diff + "</a></td>").	appendTo(str);
       }
       else {
         $("<td></td>").appendTo(str);
