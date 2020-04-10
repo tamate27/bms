@@ -60,6 +60,7 @@ ol.bread li:last-child::after {
 }
 
 table td.sc {
+  table-layout: fixed;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-text-overflow: ellipsis;
