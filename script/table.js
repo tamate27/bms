@@ -13,7 +13,7 @@ function makeBMSTable(info, mark) {
   var obj = $("#table_int");
   // 表のクリア
   obj.html("");
-  $("<tr height='2.5em' style='color:white;background-color:#0f2350'><td align='center'>LV</td><td align='center'>譜面</td><td align='center'>タイトル（LR2IR）</td><td align='center'>作者（本体）</td><td align='center'>差分</td><td align='center'>コメント</td></tr>").appendTo(obj);
+  $("<tr height='2.5em' style='color:white;background-color:#0f2350'><td align='center' width='5%'>LV</td><td align='center' width='3%'>譜面</td><td align='center' width='22%'>タイトル（LR2IR）</td><td align='center' width='20%'>作者（本体）</td><td align='center' width='20%'>差分</td><td align='center' width='10%'>コメント</td></tr>").appendTo(obj);
   var obj_sep = null;
   for (var i = 0; i < info.length; i++) {
     // 難度ごとの区切り
@@ -30,11 +30,11 @@ function makeBMSTable(info, mark) {
     // 本文
     var str = $("<tr></tr>");
     // レベル表記
-    $("<td width='5%'>" + info[i].level + "</td>").appendTo(str);
+    $("<td>" + info[i].level + "</td>").appendTo(str);
     // score viewer
-    $("<td width='3%' align='center'><a href='http://www.ribbit.xyz/bms/score/view?md5=" + info[i].md5 + "' target='_blank'> ■ </a></td>").appendTo(str);
+    $("<td align='center'><a href='http://www.ribbit.xyz/bms/score/view?md5=" + info[i].md5 + "' target='_blank'> ■ </a></td>").appendTo(str);
     // タイトル
-    $("<td width='22%'>" + "<a href='http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=" + info[i].md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
+    $("<td>" + "<a href='http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=" + info[i].md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
     // アーティスト
     var astr = "";
     if(info[i].url != (null || "")) {
@@ -48,13 +48,13 @@ function makeBMSTable(info, mark) {
         astr = info[i].artist;
       }
     }
-    $("<td width='22%'>" + astr + "</td>").appendTo(str);
+    $("<td>" + astr + "</td>").appendTo(str);
     // 差分
     if(info[i].comment == "同梱譜面") {
-      $("<td class='sc' width='20%'>同梱譜面</td>").appendTo(str);
+      $("<td class='sc'>同梱譜面</td>").appendTo(str);
     } else {
       if(info[i].url_diff != null) {
-        $("<td class='sc' width='20%'><a href='" + info[i].url_diff + "'>" + info[i].url_diff + "</a></td>").	appendTo(str);
+        $("<td class='sc'><a href='" + info[i].url_diff + "'>" + info[i].url_diff + "</a></td>").	appendTo(str);
       }
       else {
         $("<td></td>").appendTo(str);
@@ -62,9 +62,9 @@ function makeBMSTable(info, mark) {
     }
     // コメント
     if(info[i].comment != "同梱譜面") {
-      $("<td width='10%'>" + info[i].comment + "</td>").appendTo(str);
+      $("<td>" + info[i].comment + "</td>").appendTo(str);
     } else {
-      $("<td width='10%'></td>").appendTo(str);
+      $("<td></td>").appendTo(str);
     }
     str.appendTo(obj);
     count++;
