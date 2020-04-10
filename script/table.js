@@ -54,7 +54,7 @@ function makeBMSTable(info, mark) {
       $("<td class='sc' width='20%'>同梱譜面</td>").appendTo(str);
     } else {
       if(info[i].url_diff != null) {
-        $("<td class='sc' width='20%' max-width='300px'><a href='" + info[i].url_diff + "'>" + info[i].url_diff + "</a></td>").	appendTo(str);
+        $("<td class='sc' width='20%'><a href='" + info[i].url_diff + "'>" + info[i].url_diff + "</a></td>").	appendTo(str);
       }
       else {
         $("<td></td>").appendTo(str);

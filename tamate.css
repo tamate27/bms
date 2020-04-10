@@ -59,6 +59,7 @@ ol.bread li:last-child::after {
 }
 
 table td.sc {
+  max-width: 20%;
   table-layout: fixed;
   overflow: hidden;
   text-overflow: ellipsis;
