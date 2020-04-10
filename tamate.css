@@ -1,5 +1,6 @@
 body {
   -webkit-text-size-adjust: 100%;
+  font-size: calc(70% + 0.25vw);
 }
 
 p {
