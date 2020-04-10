@@ -62,7 +62,6 @@ table td.sc {
   max-width: 300px;
   overflow: hidden;
   text-overflow: ellipsis;
-  word-break: break-all;
   -webkit-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
 }
