@@ -2,7 +2,7 @@
 {
   "name": "AI難易度表",
   "symbol": "AI",
-  "data_url": test.json,
+  "data_url": "test.json",
   "level_order": [
     "☆1-4",
     "☆5-7",
